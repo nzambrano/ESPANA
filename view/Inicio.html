@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar_principal ">
     <a class="navbar-brand" href="#">
         <img class="navbar_logo" src="./resources/Logo.jpg">
     </a>
@@ -9,45 +9,93 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Bandeja <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Maestros de Referencia</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Reportes
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Reporte Mensual</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
 
+
+
+        </ul>
+
+
+
+
+
+        <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <!--   <input class="form-control mr-sm-2" type="search"  aria-label="Search"><span class="fas fa-search" aria-hidden="true" ></span>-->
-
-                   
-                     <span>ARX000411 </span> <i class="fas fa-sign-out-alt"></i>
-
-                     
-
+                    <a class="nav-link" href="#">Litigio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Analisis
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Entidades</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Tablas de referencia
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Reporte Mensual</a>
+                    </div>
                 </li>
 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Mi cuenta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Mi perfil</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Session</a>
 
-
+                    </div>
+                </li>
             </ul>
         </form>
     </div>
 </nav>
 
 
+    <div class="card" style="margin-top:10px; font-size: 16px">
+        <div class="card-header" style="font-size: 14px;">
+            <i class="fas fa-search"></i><label style="margin-left : 5px"> Filtro de Bandeja</label>
+            <button class="btn btn-warning  btn-sm float-sm-right text-center" style="margin-left: 5px;" ng-click="verFiltros()"> <i class="fas fa-filter"></i></i> Ver Filtros</button>
+            <button class="btn btn-warning  btn-sm float-sm-right text-center" ng-click="verFiltros()"> <i class="far fa-file"></i> Nuevo
+                Proceso</button>
+        </div>
 
-<table class="table table-sm  table-bordered tabla_procesos">
+    </div>
+    <div class="card-body filtro_card animated fadeIn fast" ng-show="Filtro == 1">
+        <div class="row">
+            <div class="col-sm-2">
+                <input class="form-control campos_filtro" placeholder="Referencia Expediente">
+            </div>
+            <div class="col-sm-3">
+                <input class="form-control campos_filtro" placeholder="Numero Auto">
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control campos_filtro">
+                    <option>Seleccionar Asunto</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <select class="form-control campos_filtro">
+                    <option>Seleccionar Estado</option>
+                </select>
+            </div>
+            
+            <div class="col-sm-1">
+                <button class="btn btn-warning btn-block">Filtrar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<table class="table table-responsive-lg table-sm  table-bordered tabla_procesos">
     <tr class="cabecera_tabla">
         <td style="width: 2rem; " class="align-middle">Referencia Expendiente</td>
         <td class="align-middle">Numero Auto</td>
@@ -65,12 +113,12 @@
         <td>B01 Prosegur España</td>
         <td>Terminado</td>
         <td>20/04/2018</td>
-        <td>Subrogacion</td>    
-        <td>Laboral</td>            
+        <td>Subrogacion</td>
+        <td>Laboral</td>
 
     </tr>
-    
+
     </tbody>
 
-    
+
 </table>
