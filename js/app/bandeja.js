@@ -11,6 +11,5 @@ app.controller('bandejaController', function ($scope)  {
         }
     }
 
-
     $scope.Bandeja = [];
 });
